@@ -95,6 +95,21 @@ h1 {
     color: var(--link-color);
 }
 
+.intro-list {
+    margin: 0.8rem 0 0 0;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+.intro-list li {
+    margin-bottom: 0.6rem;
+    line-height: 1.6;
+}
+
+.intro-list a {
+    font-weight: 500;
+}
+
 .social-links {
     margin-top: 1.5rem;
     display: flex;
