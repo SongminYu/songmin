@@ -565,7 +565,7 @@
             position: relative;
             z-index: 2;
             display: grid;
-            grid-template-columns: 1fr 200px 1fr;
+            grid-template-columns: minmax(0, 1fr) 200px minmax(0, 1fr);
             gap: 0;
             margin-bottom: 140px;
             align-items: start;
@@ -673,25 +673,6 @@
         .stop[data-side="right"] .stop-card {
             grid-column: 3;
             margin-left: 64px;
-        }
-
-        /* Connector line from card to road */
-        .stop-card::after {
-            content: '';
-            position: absolute;
-            top: 50px;
-            width: 30px;
-            height: 2px;
-            background: var(--ink);
-            opacity: 0.4;
-        }
-
-        .stop[data-side="left"] .stop-card::after {
-            right: -30px;
-        }
-
-        .stop[data-side="right"] .stop-card::after {
-            left: -30px;
         }
 
         .stop-location {
@@ -1226,9 +1207,6 @@
                 margin: 0;
                 text-align: left;
             }
-
-            .stop[data-side="left"] .stop-card::after,
-            .stop[data-side="right"] .stop-card::after { display: none; }
 
             .stop[data-side="left"] .stop-location { flex-direction: row; }
 
@@ -2057,9 +2035,9 @@
                     </div>
                 </a>
                 <!-- 2017-08  Outstanding Winner, 3rd CN College Energy Economics Competition -->
-                <a class="sat sat-service sat-wide" href="#" target="_blank" rel="noopener">
+                <a class="sat sat-service" href="#" target="_blank" rel="noopener">
                     <span class="sat-icon">A</span>
-                    <span class="sat-label">Outstanding Winner · Energy Economics Competition</span>
+                    <span class="sat-label">Winner · Energy Economics Competition</span>
                     <span class="sat-year">2017.08</span>
                     <div class="sat-popup">
                         <span class="sat-popup-type">Award</span>
