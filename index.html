@@ -856,6 +856,10 @@
             min-width: 0;
         }
 
+        .stop[data-side="right"] .sat-entry {
+            flex-direction: row-reverse;
+        }
+
         .sat-pdf {
             display: inline-flex;
             align-items: center;
@@ -1253,7 +1257,8 @@
                 align-items: stretch;
             }
 
-            .stop[data-side="right"] .sat { flex-direction: row; }
+            .stop[data-side="right"] .sat,
+            .stop[data-side="right"] .sat-entry { flex-direction: row; }
 
             .stop[data-side="left"] .stop-tags { justify-content: flex-start; }
 
