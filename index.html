@@ -883,6 +883,31 @@
             box-shadow: var(--shadow-md);
         }
 
+        /* Let the current career stop's items follow their content width. */
+        .stop .satellites-natural {
+            align-items: flex-start;
+            min-width: 0;
+        }
+
+        .satellites-natural > .sat,
+        .satellites-natural > .sat-entry {
+            width: max-content;
+            /* Fit between the road-side inset and the viewport's outer margin. */
+            max-width: calc(50vw - 148px);
+        }
+
+        .satellites-natural .sat-label {
+            min-width: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .satellites-natural .sat-year {
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+
         /* Hover popup card */
         .sat-popup {
             position: absolute;
@@ -1260,6 +1285,9 @@
             .stop[data-side="right"] .sat,
             .stop[data-side="right"] .sat-entry { flex-direction: row; }
 
+            .satellites-natural > .sat,
+            .satellites-natural > .sat-entry { max-width: 100%; }
+
             .stop[data-side="left"] .stop-tags { justify-content: flex-start; }
 
             .sat-popup { width: calc(100vw - 60px); left: 0 !important; right: auto !important; }
@@ -1436,7 +1464,7 @@
                 <div class="milestone-dot highlight"></div>
             </div>
 
-            <div class="satellites">
+            <div class="satellites satellites-natural">
                 <!-- 2026-11  EV adoption behavior · Transportation Letters (corresponding author) -->
                 <div class="sat-entry">
                     <a class="sat sat-paper" href="https://doi.org/10.1080/19427867.2026.2764452" target="_blank" rel="noopener">
